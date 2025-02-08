@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Interactivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menú</h2>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Reportes</a></li>
+            <li><a href="#">Configuración</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#">Soporte</a></li>
+        </ul>
+    </div>
+    <div class="contenido">
+        <header>
+            <h1>Dashboard</h1>
+            <p>Bienvenido al panel de control. Aquí puedes ver estadísticas y gestionar tu aplicación.</p>
+        </header>
+        <section class="widgets">
+            <div class="widget">
+                <h3>Usuarios Activos</h3>
+                <p>1,254</p>
+            </div>
+            <div class="widget">
+                <h3>Ventas Mensuales</h3>
+                <p>$23,567</p>
+            </div>
+            <div class="widget">
+                <h3>Tickets de Soporte</h3>
+                <p>87 abiertos</p>
+            </div>
+        </section>
+        <section class="graficos">
+            <h2>Resumen de Actividad</h2>
+            <img src="grafico.png" alt="Gráfico de actividad">
+        </section>
+    </div>
+    <script>
+        document.querySelectorAll('.sidebar ul li a').forEach(item => {
+            item.addEventListener('click', function() {
+                alert('Navegando a: ' + this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>
