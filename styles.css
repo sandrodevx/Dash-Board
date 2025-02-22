@@ -25,6 +25,11 @@ body {
 .sidebar ul li a {
     color: white;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    color: #FFD700;
 }
 
 .contenido {
@@ -35,6 +40,7 @@ body {
 .widgets {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .widget {
@@ -43,4 +49,26 @@ body {
     border-radius: 10px;
     flex: 1;
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.widget:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+
+    .widgets {
+        flex-direction: column;
+    }
 }
